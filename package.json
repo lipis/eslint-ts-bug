@@ -26,13 +26,8 @@
   },
   "name": "eslint-ts-bug",
   "scripts": {
-    "fix": "yarn fix:code && yarn fix:other",
-    "fix:code": "yarn test:code --fix",
-    "fix:other": "yarn prettier --write",
-    "prettier": "prettier \"**/*.{json,md,yaml,yml}\"",
-    "test": "yarn test:other && yarn test:code",
-    "test:code": "eslint --ignore-path .gitignore --ext .js,.ts .",
-    "test:other": "yarn prettier --list-different"
+    "fix": "yarn test --fix",
+    "test": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx . --debug"
   },
   "version": "1.0.0"
 }
